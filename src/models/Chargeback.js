@@ -10,7 +10,7 @@ export class Chargeback extends Movement {
     }
 
     getColor() {
-        return 'red';
+        return '#8B0000';
     }
 
     getIcon() {

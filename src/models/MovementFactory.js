@@ -5,8 +5,8 @@ import { Withdrawal } from './Withdrawal.js';
 import {Chargeback } from './Chargeback.js';
 
 class MovementFactory {
-    static createMovement(type, data) {
-        switch (type) {
+    static createMovement(data) {
+        switch (data.type) {
             case 'deposit':
                 return new Deposit(data);
             case 'payment':
