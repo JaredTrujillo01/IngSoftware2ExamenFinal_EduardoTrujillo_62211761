@@ -1,8 +1,8 @@
-import {Deposit } from './Deposit.js';
-import {Payment} from './Payment.js';
-import {Transfer} from './Transfer.js';
-import { Withdrawal } from './Withdrawal.js';
-import {Chargeback } from './Chargeback.js';
+import { Deposit } from './Deposit';
+import { Payment } from './Payment';
+import { Transfer } from './Transfer';
+import { Withdrawal } from './Withdrawal';
+import { Chargeback } from './Chargeback';
 
 class MovementFactory {
     static createMovement(data) {
@@ -18,7 +18,9 @@ class MovementFactory {
             case 'chargeback':
                 return new Chargeback(data);
             default:
-                throw new Error(`Unknown movement type: ${type}`);
+                throw new Error(`Unknown movement type: ${data.type}`);
         }
     }
 }
+
+export default MovementFactory;

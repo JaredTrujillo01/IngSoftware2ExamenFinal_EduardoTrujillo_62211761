@@ -57,4 +57,12 @@ export const movementsData = [
     amount: 100.00,
     date: '2025-12-08'
   }
+  ,
+  {
+    id: 9,
+    type: 'chargeback',
+    description: 'Contracargo por compra no reconocida',
+    amount: 75.00,
+    date: '2025-12-09'
+  }
 ];
